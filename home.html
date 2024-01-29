@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89509670-2"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-89509670-2');
+    </script>
+
+    <script type="text/javascript">
+        console.log("%cProject", "background: white; color: black; font-size: x-large");
+        console.log("  -Developed using A-frame.");
+        console.log("%c>> Developer", "background: white; color: black; font-size: small");
+    </script>
+
+    <meta charset="utf-8">
+    <title>TuTa Project</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+    <meta name="description" content="">
+    <meta name="keywords" content="Project, IEEE, IEEE DTU, DTU, Project, student, engineering, technical, branch, association">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet'>
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./css/modalStyle.css">
+
+
+    <noscript>
+    <style> svg{ display: none; } </style>
+  </noscript>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <link rel="tracker" sizes="1x1" href="https://static1.squarespace.com/static/585a4892bebafba69928fcd7/58d854001e5b6cc3c401841b/58d854938419c267b73956cb/1490572452018/b.gif">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+    <!-- <script type="text/javascript" src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=12"></script> -->
+    <style>
+        svg {
+            background-color: #117dd6;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding: 0;
+        }
+        
+        text {
+            fill: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="background:#000;margin-top:0px;"><p style="color:#fff">Hey</p></div> -->
+    <div class="title-home">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                    <a class="navbar-brand page-scroll" href="home.html">
+                        <div style="font-family: Shadows Into Light; font-size: 40px; color: rgb(231, 231, 161)"> Solar System By TuTa</div>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden active">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="">
+                            <a class="page-scroll" href="./project.html">The orbit of the stars</a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <a-scene>
+        <a-assets timeout="25000">
+            <a-asset-item id="earth" src="./assets/earth-obj/earth.gltf"></a-asset-item>
+            <a-asset-item id="moon-obj" src="./assets/Moon_3D_Model/moon.obj"></a-asset-item>
+            <a-asset-item id="moon-mtl" src="./assets/Moon_3D_Model/moon.mtl"></a-asset-item>
+            <a-asset-item id="sat" src="./assets/nasa-aqua-satellite-obj/nasa-aqua-satellite.gltf"></a-asset-item>
+            <a-asset-item id="mars" src="./assets/mars-obj/mars.gltf"></a-asset-item>
+            <a-asset-item id="oat" src="./assets/dtu-oat/final.gltf"></a-asset-item>
+            <a-asset-item id="sun" src="./assets/sun-obj/sun.gltf"></a-asset-item>
+
+        </a-assets>
+
+        <a-sky src="./assets/space.jpg">
+        </a-sky>
+        <a-sound src="image/backgroundfinal.mp3" autoplay="true" loop="true" position="-1 0.75 -6"></a-sound>
+
+
+        <a-entity light="type: ambient; color: #FFFFFF"></a-entity>
+        <a-entity gltf-model="#earth" position="8 1.5 -4" scale="1.5 1.5 1.5">
+            <a-animation attribute="rotation" dur="30000" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-entity>
+        <a-entity id="moon" obj-model="obj: #moon-obj; mtl: #moon-mtl" scale="0.003 0.003 0.003">
+        </a-entity>
+        <a-entity id="satellite" gltf-model="#sat" scale="0.08 0.08 0.08" position="11 1.5 1" rotation="0 -30 0">
+        </a-entity>
+        <a-entity id="mars" gltf-model="#mars" position="-13 1.5 -13" scale="1.6 1.6 1.6">
+            <a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-entity>
+        <a-entity id="oatdtu" gltf-model="#oat" position="-1 0.75 -4" scale="0.008 0.008 0.008" rotation="270 0 270">
+        </a-entity>
+
+        <a-entity id="sun" gltf-model="#sun" position="150 1.35 -3" scale="0.15 0.15 0.15">
+        </a-entity>
+
+        <a-entity camera look-controls wasd-controls position="-2 0 0" rotation="0 -100 0" id="world">
+        </a-entity>
+
+    </a-scene>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // สร้าง AudioContext
+            const context = new(window.AudioContext || window.webkitAudioContext)();
+
+            // สร้าง BufferSource
+            const source = context.createBufferSource();
+
+            // โหลดเสียง
+            fetch('image/sound.mp3')
+                .then(response => response.arrayBuffer())
+                .then(data => context.decodeAudioData(data))
+                .then(buffer => {
+                    source.buffer = buffer;
+                    source.loop = true;
+                    source.connect(context.destination);
+
+                    // เริ่มเล่นเมื่อมีการคลิก
+                    document.addEventListener('click', () => {
+                        source.start();
+                    });
+                })
+                .catch(error => console.error('Error loading audio:', error));
+        });
+    </script>
+
+    <script>
+        var t = 0;
+
+        function render() {
+            t += 0.002;
+            requestAnimationFrame(render);
+            moon.setAttribute('position', (15 * Math.cos(t) + 8) + ' 1.5 ' + (11 * Math.sin(t) - 4));
+            // ship.setAttribute('position',  '6.06 2.2' +(Math.sin(t)-1.72));
+            world.setAttribute('position', (3.25 * Math.cos(t - 3.5) + 1) + ' 2 ' + (3.25 * Math.sin(t - 3.5)));
+        }
+        render()
+    </script>
+
+</body>
+
+</html>
